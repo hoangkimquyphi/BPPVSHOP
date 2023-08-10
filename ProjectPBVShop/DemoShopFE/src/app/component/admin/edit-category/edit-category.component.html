@@ -1,0 +1,33 @@
+
+<div class="update-product">
+    <h1>Update Product</h1>
+    <p class="message-p">{{productMessage}}</p>
+    <form #addProduct="ngForm"
+    (ngSubmit)="submit(addProduct.value)"
+     class="common-form">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Nhập tên sản phẩm"
+        name="name"
+        ngModel="{{categoryData?.name}}"
+      />
+  <textarea
+  type="text"
+  class="form-input"
+  placeholder="Nhập mô tả sản phẩm"
+  name="description"
+  ngModel="{{categoryData?.description}}"
+  ></textarea>
+
+  <input
+  type="text"
+  class="form-input"
+  placeholder="Nhập URL hình ảnh sản phẩm"
+  name="image_url"
+  ngModel="{{categoryData?.image_url}}"
+  />
+  <button class="form-button">Update category</button>
+
+    </form>
+  </div>

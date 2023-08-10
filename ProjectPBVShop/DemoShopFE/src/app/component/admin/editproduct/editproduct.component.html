@@ -1,0 +1,117 @@
+<div class="update-product">
+  <h1>Update Product</h1>
+  <p class="message-p">{{ productMessage }}</p>
+  <form
+    #addProduct="ngForm"
+    (ngSubmit)="submit(addProduct.value)"
+    class="common-form"
+  >
+    <div class="text-left">
+      <label for="name">name:</label>
+
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter product name "
+        name="name"
+        ngModel="{{ productData?.name }}"
+      />
+    </div>
+
+    <div class="text-left">
+      <label for="price"> price:</label>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter product price "
+        name="price"
+        ngModel="{{ productData?.price }}"
+      />
+    </div>
+
+    <div class="text-left">
+      <label for="quantity"> quantity:</label>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter product quantity"
+        name="quantity"
+        ngModel="{{ productData?.quantity }}"
+      />
+    </div>
+
+    <div class="text-left">
+      <label for="category_id"> category:</label>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter product category "
+        name="category_id"
+        ngModel="{{ productData?.category_id }}"
+      />
+    </div>
+
+    <div class="text-left">
+      <label for="color"> color:</label>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter product color "
+        name="color"
+        ngModel="{{ productData?.color }}"
+      />
+    </div>
+
+    <div class="text-left">
+      <label for="brand">brand:</label>
+      <select
+        type="text"
+        class="form-input"
+        name="brand"
+        ngModel="{{ productData?.brand }}"
+      >
+        <option value="casio">Casio</option>
+        <option value=" Viwat">Viwat</option>
+        <option value="YORS">YORS</option>
+      </select>
+    </div>
+
+    <div class="text-left">
+      <label for="material">Material:</label>
+      <select
+        type="text"
+        class="form-input"
+        name="material"
+        ngModel="{{ productData?.material }}"
+      >
+        <option value="Bạch Kim">Bạch kim</option>
+        <option value="Kim Loại">kim loại</option>
+        <option value="Tantalum">Tantalum</option>
+      </select>
+    </div>
+
+    <div class="text-left">
+      <label for="description">description:</label>
+      <textarea
+        type="text"
+        class="form-input"
+        placeholder="Enter Product description "
+        name="description"
+        ngModel="{{ productData?.description }}"
+      ></textarea>
+    </div>
+
+    <div class="text-left"> 
+      <label for="image_url"> image:</label>
+      <input
+        type="text"
+        class="form-input"
+        placeholder="image"
+        name="image_url"
+        ngModel="{{ productData?.image_url }}"
+      />
+    </div>
+
+    <button class="form-button">Update Product</button>
+  </form>
+</div>

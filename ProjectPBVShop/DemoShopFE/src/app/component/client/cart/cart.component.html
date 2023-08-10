@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z"></path>
+      </symbol>
+
+      <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"></path>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header>
+    <div class="container">
+      <div class="row py-3 border-bottom">
+        
+        <div class="col-sm-4 col-lg-3 text-center text-sm-start">
+          <div class="main-logo">
+            <a href="index.html">
+              <img src="assets/logo.png" alt="logo" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
+          <div class="search-bar row bg-light p-2 my-2 rounded-4 align-items-center">
+            <div class="col-md-4 d-none d-md-block">
+              <select class="form-select border-0 bg-transparent">
+                <option>All Categories</option>
+                <option>Groceries</option>
+                <option>Drinks</option>
+                <option>Chocolates</option>
+              </select>
+            </div>
+            <div class="col-11 col-md-7">
+              <form id="search-form" class="text-center" action="" method="">
+                <input type="text" class="form-control border-0 bg-transparent" placeholder="Search...">
+              </form>
+            </div>
+            <div class="col-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" ><path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+
+          <ul class="d-flex justify-content-end list-unstyled m-0">
+            <li>
+              <a href="#" class="rounded-circle bg-light p-2 mx-1 text-dark">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="rounded-circle bg-light p-2 mx-1 text-dark">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#cart"></use></svg>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#search"></use></svg>
+              </a>
+            </li>
+          </ul>
+
+          <div class="cart text-end d-none d-lg-block dropdown">
+            <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+              <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
+              <h5 class="mb-0"><span class="cart-total">{{cartService.items.length}} Sản phẩm</span></h5>
+            </button>
+          </div>
+
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row py-3">
+        <div class="d-flex  justify-content-center justify-content-sm-between align-items-center">
+          <nav class="main-menu d-flex navbar navbar-expand-lg">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+              <div class="offcanvas-header justify-content-center">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
+            
+                <select class="filter-categories border-0 mb-0 me-5">
+                  <option>Shop by Departments</option>
+                  <option>Groceries</option>
+                  <option>Drinks</option>
+                  <option>Chocolates</option>
+                </select>
+            
+                <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
+                  <li class="nav-item active">
+                    <a href="#women" class="nav-link">Women</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#men" class="nav-link">Men</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#kids" class="nav-link">Kids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#accessories" class="nav-link">Accessories</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                    <ul class="dropdown-menu" aria-labelledby="pages">
+                      <li><a href="about.html" class="dropdown-item">About Us</a></li>
+                      <li><a href="shop.html" class="dropdown-item">Shop<span class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                      <li><a href="single-product.html" class="dropdown-item">Single Product<span class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                      <li><a href="cart.html" class="dropdown-item">Cart<span class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                      <li><a href="checkout.html" class="dropdown-item">Checkout<span class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                      <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+                      <li><a href="single-post.html" class="dropdown-item">Single Post</a></li>
+                      <li><a href="styles.html" class="dropdown-item">Styles</a></li>
+                      <li><a href="contact.html" class="dropdown-item">Contact<span class="badge bg-success text-dark ms-2">PRO</span></a></li>
+                      <li><a href="thank-you.html" class="dropdown-item">Thank You</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#brand" class="nav-link">Brand</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#sale" class="nav-link">Sale</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                  </li>
+                </ul>
+              
+              </div>
+
+            </div>
+
+          </nav>
+          <div class="d-none d-lg-block">
+            <a href="#" class="nav-link btn-coupon-code">
+              <img src="assets/gift.svg">
+              <strong class="ms-2">Get your coupon code</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="cart_section container">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="cart_container">
+                <div class="cart_title">Shopping Cart<small> (item in your cart) </small></div>
+                <div class="cart_items">
+                    <ul class="cart_list">
+                        <li class="cart_item clearfix" *ngFor="let item of cartService.items">
+                            <div class="cart_item_image"><img src="{{item.image_url}}" alt=""></div>
+                            <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                <div class="cart_item_name cart_info_col">
+                                    <div class="cart_item_title">Name</div>
+                                    <div class="cart_item_text">{{item.name}}</div>
+                                </div>
+                                <div class="cart_item_quantity cart_info_col">
+                                    <div class="cart_item_title">Quantity</div>
+                                    <div class="cart_item_text">{{item.quantity}}</div>
+                                </div>
+                                <div class="cart_item_price cart_info_col">
+                                    <div class="cart_item_title">Price</div>
+                                    <div class="cart_item_text">{{item.price | currency:'USD' }}</div>
+                                </div>
+                                <div class="cart_item_total cart_info_col">
+                                    <div class="cart_item_title">Total</div>
+                                    <div class="cart_item_text">{{item.price * item.quantity | currency:'USD'}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order_total">
+                    <div class="order_total_content text-md-right">
+                        <div class="order_total_title">Order Total:</div>
+                        <div class="order_total_amount">{{cartService.totalPrice | currency:'USD'}}</div>
+                    </div>
+                </div>
+                <div class="cart_buttons"> 
+                    <button type="button" class="button cart_button_clear" routerLink="/">Continue Shopping</button>
+                    <button type="button" class="button cart_button_checkout" routerLink="/order" >Checkout</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart" aria-modal="true" role="dialog">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Your cart</span>
+          <span class="badge bg-primary rounded-pill">{{cartService.items.length}}</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor="let item of cartService.items">
+            <div>
+              <h6 class="my-0">{{item.name}} * {{item.quantity}}</h6>
+              <small class="text-body-secondary">{{item.description}}</small>
+            </div>
+            <span class="text-body-secondary">{{item.price * item.quantity }}USD</span>
+            <button type="button" class="btn-close" (click)="removeFromCart(item)"></button>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>{{cartService.totalPrice }} USD</strong>
+          </li>
+        </ul>
+        <button class="w-100 btn btn-primary btn-lg " routerLink="cart" type="submit">Card</button>
+        <button class="w-100 btn btn-primary btn-lg mt-2" data-bs-dismiss="offcanvas" aria-label="Close">Continue watching</button>
+      </div>
+    </div>
+</div>
