@@ -187,7 +187,7 @@
           </div>
         </div>
     </div>
-    </div> 
+    </div>
  <!-- <div class="container">
     <section class="best-selling">
       <div class="containers" *ngIf="productData">
@@ -250,18 +250,18 @@
           </div>
         </div>
       </div>
-    
+
     </section>
     </div> -->
-    
+
 <br>
-<br> 
+<br>
     <h2  style="margin-left: 100px;">Product Reviews</h2>
-    <p>{{reviews | json}}</p>
+
      <div *ngFor="let review of reviews" style="margin-left: 120px;">
       <p>{{ review.user_id}}</p>
       <p>: {{ review.created_at }}</p>
       <a [innerHTML]="convertToStars(review.rating)" style="color: black;">  </a>
       <p class="comment">Comment: {{ review.comment }}</p>
-    </div> 
-    
+    </div>
+

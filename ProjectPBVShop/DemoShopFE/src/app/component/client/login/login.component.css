@@ -1,45 +1,64 @@
-form {
-  max-width: 400px;
-  margin: auto;
+.login-form {
+  background-color: #000;
+  border-radius: 10px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form label {
-  display: inline-block;
-  width: 100px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-form input[type="text"],
-form input[type="password"] {
-  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-button[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #0062cc;
+.login-form h2 {
   color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+
+.login-form label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
   border: none;
   border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.login-form .alert {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.login-form button[type="submit"] {
+  background-color: #2804b5;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-button[type="submit"]:hover {
-  background-color: #0062cc;
+.login-form button[type="submit"]:hover {
+  background-color: #5403df;
 }
 
-div {
-  color: red;
+.login-form h6 {
+  color: #fff;
+  text-align: center;
   margin-top: 10px;
+}
+
+.login-form h5 a {
+  color: #5403df;
 }

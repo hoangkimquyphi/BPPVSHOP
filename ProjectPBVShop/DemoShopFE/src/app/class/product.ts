@@ -9,5 +9,5 @@ export interface Product {
     material:string,
     brand:string,
     id:number,
-    
+
 }
