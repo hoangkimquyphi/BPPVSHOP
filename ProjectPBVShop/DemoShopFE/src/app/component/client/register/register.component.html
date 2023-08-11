@@ -1,5 +1,7 @@
+<div style="background-color: #cecece;">
 <br>
 <br>
+
 <div class="form-container">
   <h1>
     <p style="text-align: center;">Register </p>
@@ -8,19 +10,19 @@
   <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
 
     <div class="form-group">
-      <label for="username">User Name </label>
+      <label for="username">User Name<span style="color: red;">*</span></label>
       <input type="text" id="username" name="username" required [(ngModel)]="username" maxlength="20">
       <div *ngIf="usernameError">{{ usernameError }}</div>
     </div>
 
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email">Email<span style="color: red;">*</span></label>
       <input type="email" id="email" name="email" required [(ngModel)]="email">
       <div *ngIf="emailError">{{ emailError }}</div>
     </div>
 
     <div class="form-group">
-      <label for="full_name">Full Name</label>
+      <label for="full_name">Full Name<span style="color: red;">*</span></label>
       <input type="text" id="full_name" name="full_name" required [(ngModel)]="full_name">
       <div *ngIf="full_nameError">{{ full_nameError }}</div>
 
@@ -46,21 +48,22 @@
     </div>
     <div class="form-group">
       <label for="birthday">Birthday</label>
-      <input type="date" [id]="birthday" [(ngModel)]="birthday">
+      <input type="date" id="birthday" [(ngModel)]="birthday">
     </div>
 
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Password<span style="color: red;">*</span></label>
       <input type="password" id="password" name="password" required [(ngModel)]="password">
       <div *ngIf="passwordError">{{ passwordError }}</div>
 
     </div>
     <div class="form-group">
-      <label for="password_confirmation">Confirm Password</label>
+      <label for="password_confirmation">Confirm Password<span style="color: red;">*</span></label>
       <input type="password" id="password_confirmation" name="password_confirmation"
         required [(ngModel)]="password_confirmation">
       <div *ngIf="passwordConfirmationError">{{ passwordConfirmationError }}</div>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Register</button>
   </form>
+</div>
 </div>

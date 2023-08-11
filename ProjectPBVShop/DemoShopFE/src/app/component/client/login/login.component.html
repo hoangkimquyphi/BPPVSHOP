@@ -1,6 +1,12 @@
+<div style="background-color: #cecece;">
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+
+<div class="container">
 
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
 
@@ -17,9 +23,21 @@
     </div>
     <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
     <br>
-    
+
     <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">log in</button>
     <br>
     <h6>You are not have account ? <a routerLink="/register">Click here </a> to register</h6>
   </div>
 </form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
