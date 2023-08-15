@@ -1,4 +1,4 @@
-/* Thiết kế cho phần container chứa chi tiết sản phẩm */
+
 .product-details {
     display: flex;
     justify-content: center;
@@ -6,13 +6,13 @@
     margin-top: 20px;
   }
 
-  /* Thiết kế cho hình ảnh sản phẩm */
+
   .product-img {
     width: 100%;
     max-width: 400px;
   }
 
-  /* Thiết kế cho các chi tiết sản phẩm */
+
   .details {
     padding: 20px;
   }
@@ -57,54 +57,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  .stars {
-    display: inline-block;
-    width: 100px;
-    height: 20px;
-    background: url('https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png');
-    background-size: contain;
-  }
 
-  .stars:before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 20px;
-    background: url('https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678064-star-512.png');
-    background-size: contain;
-    transition: width 0.2s;
-  }
-
-  .stars:hover:before {
-    width: 20px;
-  }
-
-  .stars:after {
-    content: ' ';
-    display: block;
-    clear: both;
-  }
-
-  .stars input {
-    display: none;
-  }
-
-  .stars label {
-    float: right;
-    padding: 0 4px;
-    cursor: pointer;
-  }
-
-  .stars .active:before {
-    width: 100%;
-  }
-
-  .rating {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px;
-  }
   .evaluate {
     font-weight: bold;
   }

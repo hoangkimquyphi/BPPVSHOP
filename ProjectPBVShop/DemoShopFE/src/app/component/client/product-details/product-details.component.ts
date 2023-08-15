@@ -10,7 +10,7 @@ import { IReview, Review } from 'src/app/class/IReview';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent  implements OnInit {
   reviews:  Review[] = [];
@@ -29,7 +29,7 @@ export class ProductDetailsComponent  implements OnInit {
         console.log("review", reviews);
 
         this.reviews = reviews
-        console.log("aaa", this.reviews);
+        console.log("review", this.reviews);
 
       });
     productId = this.route.snapshot.paramMap.get('id');
@@ -105,20 +105,10 @@ export class ProductDetailsComponent  implements OnInit {
   p: number = 1;
   items: any[] = Array.from({length: 100}).map((_, i) => `Item ${i + 1}`);
 
-  getStarArray(rating: number): number[] {
-    return Array(rating).fill(0);
-  }
-  convertToStars(rating: number): string {
-    let stars = '';
-    for (let i = 0; i < 5; i++) {
-      if (i < Math.round(rating)) {
-        stars += '<span class="fa fa-star checked"></span>';
-      } else {
-        stars += '<span class="fa fa-star"></span>';
-      }
-    }
-    return stars;
-  }
+  // getStarArray(rating: number): number[] {
+  //   return Array(rating).fill(0);
+  // }
+
 
   days:any = 194;
 hours:number = 22;
@@ -140,8 +130,18 @@ x = setInterval(() =>{
   }
 }, 1000)
 
-  
 
+convertToStars(rating: number): string {
+  let stars = '';
+  for (let i = 0; i < 5; i++) {
+    if (i < Math.round(rating)) {
+      stars += '<span class="fa fa-star checked" style="color: yellow;"></span>';
+    } else {
+      stars += '<span class="fa fa-star" ></span>';
+    }
+  }
+  return stars;
+}
 }
 
 
