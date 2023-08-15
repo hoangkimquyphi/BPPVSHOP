@@ -88,6 +88,7 @@ export class ProductComponent implements OnInit {
       material: this.productForm.get('material')?.value,
       brand: this.productForm.get('brand')?.value,
       id: this.productForm.get('id')?.value,
+      
 
 
     }

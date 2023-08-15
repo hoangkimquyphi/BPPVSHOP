@@ -1,4 +1,4 @@
-
+@media screen {
 .product-details {
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
   .quantity-group button {
     width: 30px;
     height: 30px;
-    background-color: #007bff;
+    background-color: #ff4400;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -191,8 +191,8 @@
   margin: 22px 0;
 }
 .selling-col-3 h3 .selling-amount{
-  font-weight: 700;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 25px;
   color: #ff4400;
   font-style: italic;
 }
@@ -223,7 +223,7 @@
   transition: all .3s ease;
 }
 .cart-btn:hover{
-  color: #ff4400;
+  color: #9e3e1b;
 }
 .cart-btn i {
   margin-right: 4px;
@@ -256,5 +256,5 @@
   color: #ff4400;
 }
 
-
+}
 

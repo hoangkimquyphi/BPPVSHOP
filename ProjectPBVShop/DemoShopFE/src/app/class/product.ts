@@ -10,4 +10,5 @@ export interface Product {
     brand:string,
     id:number,
 
+
 }

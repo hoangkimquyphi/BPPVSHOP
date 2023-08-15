@@ -6,6 +6,7 @@ import { ProductService } from 'src/app/_service/product.service';
 import { ReviewService } from 'src/app/_service/review.service';
 import { Product } from 'src/app/class/product';
 import { IReview, Review, User } from 'src/app/class/IReview';
+import { Category } from 'src/app/class/category';
 
 @Component({
   selector: 'app-product-details',
@@ -16,6 +17,7 @@ export class ProductDetailsComponent  implements OnInit {
   reviews:  Review[] = [];
   users: User[] = [];
   productData: undefined | Product;
+  
   productMessage: undefined | string;
   quantity:number=1;
 
@@ -32,8 +34,8 @@ export class ProductDetailsComponent  implements OnInit {
 
         this.reviews = reviews
         console.log("review", this.reviews);
-
       });
+
     productId = this.route.snapshot.paramMap.get('id');
     console.warn(productId);
     productId &&
@@ -142,7 +144,7 @@ convertToStars(rating: number): any[] {
     };
     if (i < Math.round(rating)) {
       star.class += ' checked';
-      star.color = 'yellow';
+      star.color = '#ff4400';
     }
     stars.push(star);
   }

@@ -6,9 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
+  getCategory(categoryId: any) {
+    throw new Error('Method not implemented.');
+  }
 
   items : any[] =[];
-  
+
   totalPrice =0;
 
   total = 0;
@@ -64,7 +67,7 @@ export class CartService {
     this.saveCart();
     this.getTotalPrice();
   }
-  
+
 
   productInCart(item: any):boolean{
     return this.items.  findIndex((x:any) => x.id == item.id) > -1;
@@ -72,7 +75,7 @@ export class CartService {
   loadCart():void{
     this.items = JSON.parse(localStorage.getItem('cart_items') as any) || [];
     this.getTotalPrice();
-    
+
 
   }
 
