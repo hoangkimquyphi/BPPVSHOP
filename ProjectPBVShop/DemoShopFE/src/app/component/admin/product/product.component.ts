@@ -62,7 +62,7 @@ export class ProductComponent implements OnInit {
       color: this.productForm.get('color')?.value,
       image_url: this.productForm.get('image_url')?.value,
       material: this.productForm.get('material')?.value,
-      brand: this.productForm.get('brand')?.value,
+      // brand: this.productForm.get('brand')?.value,
       id: this.productForm.get('id')?.value,
 
     }
@@ -86,7 +86,7 @@ export class ProductComponent implements OnInit {
       color: this.productForm.get('color')?.value,
       image_url: this.productForm.get('image_url')?.value,
       material: this.productForm.get('material')?.value,
-      brand: this.productForm.get('brand')?.value,
+      // brand: this.productForm.get('brand')?.value,
       id: this.productForm.get('id')?.value,
 
 

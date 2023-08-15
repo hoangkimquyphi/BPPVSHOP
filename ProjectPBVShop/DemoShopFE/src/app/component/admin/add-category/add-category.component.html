@@ -1,11 +1,13 @@
 <div class="add-product">
-    <h1>Add Product</h1>
+    <h1>Add category</h1>
     <p class="message-p">{{ addProductMessage }}</p>
     <form
       #addProduct="ngForm"
       (ngSubmit)="submit(addProduct.value)"
       class="common-form"
+      
     >
+    <label for="name">Name</label>
       <input
         type="text"
         class="form-input"
@@ -13,6 +15,8 @@
         name="name"
         ngModel
       />
+      <br>
+      <label for="nadescriptionme">Description</label>
       <input
       type="text"
       class="form-input"
@@ -20,6 +24,8 @@
       name="description"
       ngModel
     />
+    <br>
+    <label for="image_url">IMG</label>
     <input
     type="text"
     class="form-input"
@@ -27,7 +33,8 @@
     name="image_url"
     ngModel
   />
-    
+  <br>
+
       <button class="form-button">ADD CATEGORY</button>
     </form>
   </div>

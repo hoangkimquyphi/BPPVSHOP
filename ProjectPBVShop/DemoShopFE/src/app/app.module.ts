@@ -26,7 +26,6 @@ import { AddCategoryComponent } from './component/admin/add-category/add-categor
 import { EditCategoryComponent } from './component/admin/edit-category/edit-category.component';
 import { TrendyproductComponent } from './component/client/trendyproduct/trendyproduct.component';
 import { CardPageComponent } from './component/client/card-page/card-page.component';
-import { ProductReviewsComponent } from './component/client/product-reviews/product-reviews.component';
 
 
 
@@ -55,8 +54,7 @@ import { ProductReviewsComponent } from './component/client/product-reviews/prod
     EditCategoryComponent,
     TrendyproductComponent,
     CardPageComponent,
-    ProductReviewsComponent,
-
+   
 
 
   ],

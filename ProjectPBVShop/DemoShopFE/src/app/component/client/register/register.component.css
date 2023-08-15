@@ -58,13 +58,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #080bca;
-}
-.alert {
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  background-color: #0062cc;
 }
 
 .alert-danger {

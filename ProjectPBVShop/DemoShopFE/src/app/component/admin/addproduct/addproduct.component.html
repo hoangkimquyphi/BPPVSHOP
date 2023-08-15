@@ -1,4 +1,4 @@
-<h3><a routerLink="/admin">hiigi</a></h3>
+
 <div class="add-product">
   <h1>Add Product</h1>
   <p class="message-p">{{ addProductMessage }}</p>
@@ -51,8 +51,6 @@
     />
    </div>
 
-   
-   
    <div class="text-left">
     <label for="category_id">category:</label>
     <input
@@ -64,9 +62,6 @@
     />
    </div>
 
-
-   
-   
    <div class="text-left">
     <label for="color">color:</label>
     <input
@@ -78,14 +73,14 @@
     />
    </div>
 
-    <div class="text-left">
+    <!-- <div class="text-left">
       <label for="brand">brand:</label>
       <select type="text" class="form-input" name="brand" ngModel>
         <option value="casio">Casio</option>
         <option value=" Viwat">Viwat</option>
         <option value="YORS">YORS</option>
       </select>
-    </div>
+    </div> -->
 
 
     <div class="text-left">
@@ -96,9 +91,6 @@
         <option value="Gold plated">Gold plated</option>
       </select>
     </div>
-
-
-
     <div class="text-left">
       <label for="description">description:</label>
       <textarea
@@ -110,16 +102,14 @@
       ></textarea>
     </div>
 
-    <div class="text-left">
-      <label for="img">image_url:</label>
     <input
+    
       type="text"
       class="form-input"
       placeholder="Enter product image_url"
       name="image_url"
       ngModel
     />
-    </div>
     <button class="form-button">ADD PRODUCT</button>
   </form>
 </div>

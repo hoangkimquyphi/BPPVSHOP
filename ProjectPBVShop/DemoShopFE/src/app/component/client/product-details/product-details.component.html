@@ -155,7 +155,7 @@
 
 <br>
 <br>
-   <div class="row product-details" *ngIf="productData">
+   <!-- <div class="row product-details" *ngIf="productData">
     <div class="col-sm-6">
     <img  class="product-img" src="{{productData.image_url}}" alt="" width="600px">
     </div>
@@ -180,7 +180,12 @@
             <h3>Price : {{productData.price | currency:'USD'}}</h3>
            <span [style.backgroundColor]="productData.color" class="product-color"></span>
             <h6>Category : {{productData.category_id}}</h6>
+<<<<<<< HEAD
+           
+            <h6>material : {{productData.material}}</h6>
+=======
             <h6>Material : {{productData.material}}</h6>
+>>>>>>> a2ea51380976d421008f9395d259ea8733023a82
             <h6>Description : {{productData.description}}</h6>
             <a href="#" (click)="addToCart(productData)" class="btn btn-primary" style="background-color: #007bff;">Add to cart</a>
             <div class="quantity-group">
@@ -190,8 +195,13 @@
           </div>
         </div>
     </div>
+<<<<<<< HEAD
+    </div>  -->
+ <div class="container">
+=======
     </div>
  <!-- <div class="container">
+>>>>>>> a2ea51380976d421008f9395d259ea8733023a82
     <section class="best-selling">
       <div class="containers" *ngIf="productData">
         <div class="best-selling-container">
@@ -228,6 +238,8 @@
           <div class="selling-col-3">
             <div class="selling-heading">
               <a href="javascript:void(0);">{{productData.name}}</a>
+              <h6>material : {{productData.material}}</h6>
+              <h6>Category : {{productData.category_id}}</h6>
               <div class="selling-rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -236,15 +248,13 @@
                 <i class="fa fa-star"></i>
               </div>
             </div>
-            <p>Miêu tả : {{productData.description}}</p>
-            <p>Miêu tả : {{productData.brand}}</p>
-            <p>Miêu tả : {{productData.material}}</p>
-            <div>Màu :<h3 [style.backgroundColor]="productData.color" class="product-color"></h3></div>
+            <p>description : {{productData.description}}</p>
+            <p>material: {{productData.material}}</p>
+            <div>color :<h3 [style.backgroundColor]="productData.color" class="product-color"></h3></div>
             <h3>
               <span class="selling-amount">Giá: ${{productData.price}}</span>
             </h3>
-            <div class="selling-button" (click)="addToCart(productData)">
-              <a href="javascript:void(0);" class="cart-btn"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+              <a href=""(click)="addToCart(productData)"  class="cart-btn"><i class="fa fa-shopping-cart"></i>Add to cart</a>
               <button type="button" class="main-button">
                 <a href="javascript:void(0);"><i class="fa fa-heart"></i></a>
                 <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
@@ -252,15 +262,26 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+     
+    
+    </section>
+    </div>
+    
+=======
       </div>
 
     </section>
     </div> -->
 
 <br>
+>>>>>>> a2ea51380976d421008f9395d259ea8733023a82
 <br>
     <h2  style="margin-left: 100px;">Product Reviews</h2>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a2ea51380976d421008f9395d259ea8733023a82
      <div *ngFor="let review of reviews" style="margin-left: 120px;">
       <img src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" width="30px" style="margin-right: 20px;" alt="">
       <a [innerHTML]="convertToStars(review.rating)" >  </a>

@@ -62,9 +62,8 @@ export class IndexComponent implements OnInit {
     this.cartService.updateCart(item,quantity);
   }
   onLogout(){
-   
-    this.router.navigate(['/login']);
-    localStorage.removeItem('access_token');
+    localStorage.removeItem('login');
+    this.router.navigate(['/login'])
   }
   userAuthReload(){
     if(localStorage.getItem('user')){

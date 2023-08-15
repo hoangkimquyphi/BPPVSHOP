@@ -17,46 +17,55 @@
             
                 <form class="row justify-content-around" [formGroup]="orderForm" (ngSubmit)="onSubmit()">
                     <div class="col-md-5">
+                
                         <div class="card border-0">
                             <div class="card-header pb-0">
                                 <h2 class="card-title space ">Checkout</h2>
-                                <p class="card-text text-muted mt-4  space">SHIPPING DETAILS</p>
+                                <p class="card-text text-muted mt-4  space">Userprofile</p>
                                 <hr class="my-0">
                             </div>
+                            <table class="table">
+                                <thead>
+                                  <tr class="text-center">
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Full Name</th>
+                                    <th>Address</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngIf="users"class="text-center">
+                                    <td>{{ users.username }}</td>
+                                    <td>{{ users.email }}</td>
+                                    <td>{{ users.full_name }}</td>
+                                    <td>{{ users.address }}</td>
+                          
+                                  </tr>
+                                </tbody>
+                              </table>
                             <div class="card-body">
 
                                 <div class="row mt-4">
                                     <div class="col"><p class="text-muted mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
                                 </div>
+                    
                                 <div class="form-group">
-                                    <label for="NAME" class="small text-muted mb-1">user_id</label>
-                                    <input type="text" class="form-control form-control-sm" formControlName="user_id" name="user_id" id="user_id" aria-describedby="helpId" placeholder="user_id">
-                                </div>
+                                    <label for="NAME" class="small text-muted mb-1">customer_name</label>
+                                    <input type="text" class="form-control form-control-sm" formControlName="customer_name" name="customer_name" id="customer_name" aria-describedby="helpId" placeholder="">
+                                </div> 
                                 <div class="form-group">
-                                    <label for="NAME" class="small text-muted mb-1">payment</label>
-                                    <input type="text" class="form-control form-control-sm" formControlName="payment" name="payment" id="payment" aria-describedby="helpId" placeholder="payment">
-                                </div>
-                                <!-- <div class="form-group">
-                                    <label for="NAME" class="small text-muted mb-1">Phone</label>
-                                    <input type="text" class="form-control form-control-sm" formControlName="email" name="NAME" id="NAME" aria-describedby="helpId" placeholder="Phone">
-                                </div> -->
+                                    <label for="NAME" class="small text-muted mb-1">customer_email</label>
+                                    <input type="text" class="form-control form-control-sm" formControlName="customer_email" name="customer_email" id="customer_email" aria-describedby="helpId" placeholder="">
+                                </div> 
+                                <div class="form-group">
+                                    <label for="NAME" class="small text-muted mb-1">shipping_address</label>
+                                    <input type="text" class="form-control form-control-sm" formControlName="shipping_address" name="shipping_address" id="shipping_address" aria-describedby="helpId" placeholder="">
+                                </div> 
+                                <div class="form-group">
+                                    <label for="NAME" class="small text-muted mb-1">phone</label>
+                                    <input type="text" class="form-control form-control-sm" formControlName="phone" name="phone" id="phone" aria-describedby="phone" placeholder="">
+                                </div> 
                                 
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12 pr-sm-12">
-                                        <div class="form-group">
-                                            <label for="NAME" class="small text-muted mb-1">status</label>
-                                            <input type="text" class="form-control form-control-sm" formControlName="status" name="status" id="status" aria-describedby="helpId" placeholder="status">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-sm-12 pr-sm-12">
-                                        <div class="form-group">
-                                            <label for="NAME" class="small text-muted mb-1">order_items</label>
-                                            <input type="text" class="form-control form-control-sm" formControlName="order_items" name="status" order_items="shipping_address" aria-describedby="helpId" placeholder="order_items">
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
