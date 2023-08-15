@@ -13,3 +13,15 @@ export interface Login {
     password: string,
     password_confirmation: string,
   }
+  export interface User {
+    username: string;
+    email: string;
+    full_name: string,
+    phone: Number,
+    address: string,
+    gender: string,
+    birthday: Number,
+    password: string,
+    password_confirmation: string,
+    role: string,
+  }

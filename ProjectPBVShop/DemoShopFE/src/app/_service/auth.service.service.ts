@@ -15,7 +15,6 @@ export class AuthServiceService {
     const token = this.getToken();
     if(token) this.setLoggedIn(true)
   }
-
   login(
     username: string,
     password: string
@@ -90,4 +89,8 @@ export class AuthServiceService {
     return this.http.post(url, body); // Gửi request và trả về response dưới dạng Observable
   }
   //adding product in
+  getListUser(): Observable<any> {
+    return this.http.get('http://localhost:4000/api/users/profile');
+  }
+
 }

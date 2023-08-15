@@ -1,0 +1,16 @@
+<div>
+    <label for="product_id">Product ID:</label>
+    <input type="number" id="product_id" [(ngModel)]="product_id">
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="quantity">
+  </div>
+  <button (click)="addToCart()">Add to Cart</button>
+
+
+<!-- 
+  <div *ngFor="let item of cartItems">
+    <p>{{ item.name }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+  </div> -->

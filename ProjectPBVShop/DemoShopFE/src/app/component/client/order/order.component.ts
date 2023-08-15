@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/_service/auth.service.service';
 import { CartService } from 'src/app/_service/cart.service';
 import { OrderService } from 'src/app/_service/order.service';
 import { Order } from 'src/app/class/order';
 import { OrderItem } from 'src/app/class/order-item';
+import { User } from 'src/app/class/user';
 
 @Component({
   selector: 'app-order',
@@ -14,21 +16,34 @@ import { OrderItem } from 'src/app/class/order-item';
 export class OrderComponent implements OnInit {
 
   orderForm !: FormGroup;
+  users: undefined | User;
   orderItem : any;
   listOrderItems : OrderItem[] = [];
 
-  constructor(public cartService:CartService,private orderService:OrderService,public fb: FormBuilder,private router: Router){
+  constructor(public cartService:CartService,private orderService:OrderService,public fb: FormBuilder,private router: Router,private userService: AuthServiceService){
     this.orderForm = this.fb.group({
-      id: [''],
-      user_id: [''],
-      payment: [''],
-      status: [''],
-      order_items: [''],
+      cart_id: [''],
+      total_price: [''],
+      customer_name: [''],
+      customer_email: [''],
+      shipping_address: [''],
+      customer_phone: [''],
     });
   }
 
   ngOnInit(): void {
     this.cartService.loadCart();
+    this.getListUser();
+  }
+  getListUser(): void {
+    this.userService.getListUser().subscribe(
+      (data) => {
+        this.users = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   onSubmit(){
@@ -38,10 +53,9 @@ export class OrderComponent implements OnInit {
     })
     const data : Order = {
       id: this.orderForm.get('id')?.value,
-      user_id: this.orderForm.get('user_id')?.value,
       payment: this.orderForm.get('payment')?.value,
       status: this.orderForm.get('status')?.value,
-      order_items: this.listOrderItems
+      // order_items: this.listOrderItems
     }
 
     this.orderService.createOrder(data).subscribe(data=>{

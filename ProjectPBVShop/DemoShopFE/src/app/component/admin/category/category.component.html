@@ -63,7 +63,9 @@
       
 
       <td>
-        <button type="button"class="btn btn-primary" data-bs-dismiss="modal" routerLink="/editcategory/{{item.id}}">Edit</button>
+        <button type="button"class="btn btn-primary" data-bs-dismiss="modal" class="btn btn-primary text-light ms-2" routerLink="/editcategory/{{item.id}}">Edit</button>
+        <br>
+        <br>
         <button type="button" (click)="getDeleteId(item.id)" data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger text-light ms-2">Delete</button>
       </td>
     </tr>

@@ -14,7 +14,7 @@ export class ReviewService {
 
   getReviewsByProductId(productId: number): Observable<Review[]> {
     // return this.http.get<IReview[]>(`http://localhost:4000/api/reviews/${productId}/reviews`);
-    const url = `http://localhost:4000/api/reviews/${productId}/reviews`;
+    const url = `http://localhost:4000/api/reviews/${productId}`;
     return this.http.get<Review[]>(url);
 
 
