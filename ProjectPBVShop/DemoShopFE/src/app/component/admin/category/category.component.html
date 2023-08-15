@@ -30,7 +30,7 @@
       <div class="modal-body">
         <div class="mb-3">
           <label for="" class="form-label" >image_url</label>
-          <input type="text" formControlName="image_url" class="form-control" placeholder="image_url">
+          <input type="text"  class="form-control" formControlName="image_url" placeholder="image_url">
         </div>
       </div>
       <div class="modal-footer">
@@ -59,7 +59,7 @@
       <td>{{item.id}}</td>
       <td>{{item.name}}</td>
       <td>{{item.description}}</td>
-      <td>{{item.image_url}}</td>
+      <td><img src="{{ item.image_url }}"width="100px" /></td>
       
 
       <td>
