@@ -38,11 +38,10 @@ export class ReviewService {
     this.createTokenizeHeader(headers,token)
     console.log(token)
     if (token) {
-
-      // const headers = new Headers({
-      //   'Content-Type': 'application/json',
-      //   'Authorization': `Bearer ${token}`
-      // })
+      const headers = new Headers({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      })
       console.log(headers)
 
       return this.http.post<any>(`http://localhost:4000/api/reviews/${productId}`, { headers, observe: 'response' });

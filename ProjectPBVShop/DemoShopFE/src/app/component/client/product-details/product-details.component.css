@@ -175,9 +175,7 @@
   text-decoration: none;
   transition: all .3s ease;
 }
-.selling-heading a:hover{
-  color: #ff4400;
-}
+
 .selling-rating{
   margin-top: 4px;
 
@@ -254,4 +252,9 @@
 .main-button a:hover{
   background: #ff4400;
 }
+.average-rating{
+  color: #ff4400;
+}
+
+
 
