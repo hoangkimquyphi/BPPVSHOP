@@ -15,7 +15,7 @@ export class OrderService {
 
   constructor(private http:HttpClient) { }
 
-  
+
   getListOrder():Observable<any>{
     return this.http.get('http://localhost:4000/order',httpOptions);
   }
@@ -24,7 +24,7 @@ export class OrderService {
     return this.http.post('http://localhost:4000/order',order,httpOptions);
   }
   
-  
+
 
 
 }

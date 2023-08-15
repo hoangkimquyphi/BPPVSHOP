@@ -26,7 +26,6 @@ import { AddCategoryComponent } from './component/admin/add-category/add-categor
 import { EditCategoryComponent } from './component/admin/edit-category/edit-category.component';
 import { TrendyproductComponent } from './component/client/trendyproduct/trendyproduct.component';
 import { CardPageComponent } from './component/client/card-page/card-page.component';
-import { UserprofileComponent } from './component/admin/userprofile/userprofile.component';
 
 
 
@@ -55,10 +54,9 @@ import { UserprofileComponent } from './component/admin/userprofile/userprofile.
     EditCategoryComponent,
     TrendyproductComponent,
     CardPageComponent,
-    UserprofileComponent,
    
 
-  
+
   ],
   imports: [
     BrowserModule,
@@ -67,8 +65,8 @@ import { UserprofileComponent } from './component/admin/userprofile/userprofile.
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    
-    
+
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

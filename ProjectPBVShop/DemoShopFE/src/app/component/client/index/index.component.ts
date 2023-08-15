@@ -49,9 +49,9 @@ export class IndexComponent implements OnInit {
       this.router.navigate(['/login']);
 
     }
-    
+
   }
-  
+
 
   removeFromCart(item:any){
     this.cartService.remove(item);
@@ -62,7 +62,7 @@ export class IndexComponent implements OnInit {
     this.cartService.updateCart(item,quantity);
   }
   onLogout(){
-    localStorage.removeItem('access_token');
+    localStorage.removeItem('login');
     this.router.navigate(['/login'])
   }
   userAuthReload(){

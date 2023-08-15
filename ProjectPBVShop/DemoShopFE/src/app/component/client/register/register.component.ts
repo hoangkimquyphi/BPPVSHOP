@@ -27,17 +27,20 @@ export class RegisterComponent {
   phoneError: string = '';
   passwordError: string = '';
   passwordConfirmationError: string = '';
+
+  
+
   constructor(private userService: AuthServiceService,private router:Router) {}
   onSubmit() {
 
     this.userService.register(this.username, this.email, this.full_name, this.phone,this.address,this.gender,this.birthday, this.password,this.password_confirmation).subscribe(
       (response) => {
+
         this.router.navigate(['/login'])
 
       },
       (error) => {
         console.log('register failed:', error);
-        alert('required to enter all fields or correct format')
       }
     );
 
@@ -50,7 +53,7 @@ export class RegisterComponent {
     if (!this.email) {
       this.emailError = 'Email is required';
     } else if (!this.isValidEmail(this.email)) {
-      this.emailError = 'Email is invalid';
+      this.emailError = 'Email is invalid   |   Ex: abc@gmail.com';
     }
 
     if (!this.full_name) {

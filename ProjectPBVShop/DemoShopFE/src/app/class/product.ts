@@ -9,4 +9,4 @@ export interface Product {
     material:string,
     id:number,
     
-}   
+}
