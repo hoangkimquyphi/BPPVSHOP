@@ -43,7 +43,7 @@
                                   </tr>
                                 </tbody>
                               </table>
-                            <div class="card-body">
+                            <!-- <div class="card-body">
 
                                 <div class="row mt-4">
                                     <div class="col"><p class="text-muted mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
@@ -62,12 +62,20 @@
                                     <input type="text" class="form-control form-control-sm" formControlName="shipping_address" name="shipping_address" id="shipping_address" aria-describedby="helpId" placeholder="">
                                 </div> 
                                 <div class="form-group">
-                                    <label for="NAME" class="small text-muted mb-1">phone</label>
-                                    <input type="text" class="form-control form-control-sm" formControlName="phone" name="phone" id="phone" aria-describedby="phone" placeholder="">
+                                    <label for="NAME" class="small text-muted mb-1">customer_phone</label>
+                                    <input type="text" class="form-control form-control-sm" formControlName="customer_phone" name="customer_phone" id="customer_phone" aria-describedby="customer_phone" placeholder="">
                                 </div> 
                                 
 
-                            </div>
+                            </div> -->
+                            <form class="order-form" (ngSubmit)="submitOrder()">
+                                <!-- Các trường dữ liệu đơn hàng -->
+                                <input [(ngModel)]="customerName" name="customerName" placeholder="customerName" required>
+                                <input [(ngModel)]="customerEmail" name="customerEmail" placeholder="customerEmail" required>
+                                <input [(ngModel)]="shippingAddress" name="shippingAddress" placeholder="shippingAddress" required>
+                                <input [(ngModel)]="customerPhone" name="customerPhone" placeholder="customerPhone" required>
+                              
+                              </form>
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -110,7 +118,7 @@
                                     </div>
                                 </div>
                                 <div class="row mb-5 mt-4 ">
-                                    <div class="col-md-7 col-lg-6 mx-auto"><button type="onSubmit" class="btn btn-block btn-outline-primary btn-lg">payment for the order</button></div>
+                                    <div class="col-md-7 col-lg-6 mx-auto"><button (ngSubmit)="submitOrder()" class="btn btn-block btn-outline-primary btn-lg">payment for the order</button></div>
                                 </div>
                             </div>
                         </div>

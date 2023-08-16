@@ -17,6 +17,8 @@ import { LoginAdminComponent } from './component/admin/login-admin/login-admin.c
 import { AddCategoryComponent } from './component/admin/add-category/add-category.component';
 import { EditCategoryComponent } from './component/admin/edit-category/edit-category.component';
 import { CardPageComponent } from './component/client/card-page/card-page.component';
+import { ProductReviewsComponent } from './component/client/product-reviews/product-reviews.component';
+import { SearchComponent } from './component/client/search/search.component';
 
 
 const routes: Routes = [
@@ -34,7 +36,12 @@ const routes: Routes = [
   {path:'addcategory',component:AddCategoryComponent},
   {path:'editcategory/:id',component:EditCategoryComponent},
   {path:'card-page',component:CardPageComponent},
+  {path:'product-reviews/:id',component: ProductReviewsComponent},
+  {path:'search/:query',component: SearchComponent},
+  
+
   {path:'admin',component: DashboardComponent,
+
 
     children: [
       {path:'',component:CategoryComponent},

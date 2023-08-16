@@ -38,7 +38,17 @@
           </div>
           <div class="col-11 col-md-7">
             <form id="search-form" class="text-center" action="" method="">
-              <input type="text" class="form-control border-0 bg-transparent" placeholder="Search...">
+              <!-- <input type="text" class="form-control border-0 bg-transparent" placeholder="Search..."> -->
+              <input type="text"
+              #searchInput
+              (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search..." />
+              <button (click)="submitSearch(searchInput.value)" >Search</button>
+              <ul class="suggested-search" *ngIf="searchResult">
+                <li *ngFor="let item of searchResult">
+                  <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
+                </li>
+              </ul>
+              
             </form>
           </div>
           <div class="col-1">
@@ -156,9 +166,6 @@
   </div>
 </div>
 </header>
-
-
-
 
 
 
