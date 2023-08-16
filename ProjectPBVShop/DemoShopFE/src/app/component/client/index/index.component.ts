@@ -4,6 +4,7 @@ import { AuthServiceService } from 'src/app/_service/auth.service.service';
 import { CartService } from 'src/app/_service/cart.service';
 import { CategoryService } from 'src/app/_service/category.service';
 import { ProductService } from 'src/app/_service/product.service';
+import { Product } from 'src/app/class/product';
 
 @Component({
   selector: 'app-index',
@@ -17,7 +18,7 @@ export class IndexComponent implements OnInit {
   listCategory:any;
  AuthServiceService: any;
  loader: Boolean=true;
-
+ searchResult:undefined|Product[];
   constructor(private productService: ProductService,public cartService:CartService,private categoryService: CategoryService,private authService:AuthServiceService,private router: Router){}
 
   ngOnInit(): void {
@@ -39,6 +40,30 @@ export class IndexComponent implements OnInit {
       this.loader=false;
     })
   }
+
+  searchProduct(query:KeyboardEvent){
+    if(query){
+      const element = query.target as HTMLInputElement;
+      this.productService.searchProduct(element.value).subscribe((result)=>{
+       
+        if(result.length>5){
+          result.length=length
+        }
+        this.searchResult=result;
+      })
+    }
+  }
+  hideSearch(){
+    this.searchResult=undefined
+  }
+  redirectToDetails(id:number){
+    this.router.navigate(['/details/'+id])
+  }
+  submitSearch(val:string){
+    console.warn(val)
+  this.router.navigate([`search/${val}`]);
+  }
+
 
   addToCart(item: any){
     if (this.authService.isLoggedIn()){

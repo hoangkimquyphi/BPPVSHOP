@@ -70,6 +70,15 @@ export class ProductService {
     // Implement the logic to fetch product details from the backend API based on the productId
     return this.http.get<any>(`http://localhost:4000/api/products/${productId}`);
   }
+  // getProductsearch(searchTerm: string) {
+  //   // Gọi API GET để lấy danh sách sản phẩm dựa trên từ khóa tìm kiếm
+  //   return this.http.get(`http://localhost:4000/api/products?search=${searchTerm}`);
+  // }
+  searchProduct(query: string) {
+    return this.http.get<Product[]>(
+      `http://localhost:4000/api/products?search=${query}`
+    );
+  }
 
 
 }

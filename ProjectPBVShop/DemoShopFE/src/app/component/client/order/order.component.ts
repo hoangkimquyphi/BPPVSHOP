@@ -6,7 +6,8 @@ import { CartService } from 'src/app/_service/cart.service';
 import { OrderService } from 'src/app/_service/order.service';
 import { Order } from 'src/app/class/order';
 import { OrderItem } from 'src/app/class/order-item';
-import { User } from 'src/app/class/user';
+import { 
+  User } from 'src/app/class/user';
 
 @Component({
   selector: 'app-order',
@@ -19,6 +20,10 @@ export class OrderComponent implements OnInit {
   users: undefined | User;
   orderItem : any;
   listOrderItems : OrderItem[] = [];
+  customerName: any;
+  customerEmail: any;
+  shippingAddress: any;
+  customerPhone: any;
 
   constructor(public cartService:CartService,private orderService:OrderService,public fb: FormBuilder,private router: Router,private userService: AuthServiceService){
     this.orderForm = this.fb.group({
@@ -45,6 +50,7 @@ export class OrderComponent implements OnInit {
       }
     );
   }
+  
 
   onSubmit(){
     this.cartService.items.forEach(res =>{
@@ -64,5 +70,31 @@ export class OrderComponent implements OnInit {
     })
   
   }
+  submitOrder() {
+    const orderData = {
+      orderItems: {
+        customer_name: this.customerName,
+        customer_email: this.customerEmail,
+        shipping_address: this.shippingAddress,
+        customer_phone: this.customerPhone
+      },
+      order: {
+        payment: 'cash',
+        status: 'pending'
+      }
+    };
+
+    this.orderService.createOrder(orderData).subscribe(
+      response => {
+        // Xử lý phản hồi từ API sau khi đơn hàng được tạo thành công
+        console.log(response);
+      },
+      error => {
+        // Xử lý lỗi nếu có
+        console.error(error);
+      }
+    );
+  }
+
 
 }

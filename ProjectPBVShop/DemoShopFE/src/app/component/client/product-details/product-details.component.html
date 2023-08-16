@@ -1,84 +1,106 @@
- <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <defs>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z"></path>
-      </symbol>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z">
+      </path>
+    </symbol>
 
-      <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path>
-      </symbol>
-      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"></path>
-      </symbol>
-    </defs>
-  </svg>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z">
+      </path>
+    </symbol>
+  </defs>
+</svg>
 
 <header>
-    <div class="container">
-      <div class="row py-3 border-bottom">
+  <div class="container">
+    <div class="row py-3 border-bottom">
 
-        <div class="col-sm-4 col-lg-3 text-center text-sm-start">
-          <div class="main-logo">
-            <a href="index.html">
-              <img src="https://thuvienlogo.com/data/03/logo-dong-ho-dep-03.jpg" width="180px" alt="logo" class="img-fluid">
+      <div class="col-sm-4 col-lg-3 text-center text-sm-start">
+        <div class="main-logo">
+          <a href="index.html">
+            <img src="https://thuvienlogo.com/data/03/logo-dong-ho-dep-03.jpg" width="180px" alt="logo"
+              class="img-fluid">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
+        <div class="search-bar row bg-light p-2 my-2 rounded-4 align-items-center">
+          <div class="col-md-4 d-none d-md-block">
+            <select class="form-select border-0 bg-transparent">
+              <option>Categories</option>
+              <option>Japanese Watches</option>
+              <option>Swiss Watches</option>
+              <option>French Watches</option>
+            </select>
+          </div>
+          <div class="col-11 col-md-7">
+            <form id="search-form" class="text-center" action="" method="">
+              <input type="text" class="form-control border-0 bg-transparent" placeholder="Search...">
+            </form>
+          </div>
+          <div class="col-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <path fill="currentColor"
+                d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+
+        <ul class="d-flex justify-content-end list-unstyled m-0">
+          <li>
+            <a routerLink="login" class="rounded-circle bg-light p-2 mx-1 text-dark">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="#user"></use>
+              </svg>
             </a>
-          </div>
+          </li>
+          <li>
+
+          <li>
+            <a (click)="onLogout()"><img src="https://img.icons8.com/?size=1x&id=2445&format=png" width="24px"
+                height="24px" style="margin-left: 20px;" class="img-fluid">
+            </a>
+          </li>
+          <li class="d-lg-none">
+            <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="d-lg-none">
+            <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <use xlink:href="#search"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="cart text-end d-none d-lg-block dropdown">
+          <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+            <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
+            <h5 class="mb-0"><span class="cart-total">{{cartService.items.length}} Product</span></h5>
+          </button>
         </div>
-
-
-        <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
-          <div class="search-bar row bg-light p-2 my-2 rounded-4 align-items-center">
-            <div class="col-md-4 d-none d-md-block" >
-              <select class="form-select border-0 bg-transparent" >
-                <option>Categories</option>
-                <option>Japanese Watches</option>
-                <option>Swiss Watches</option>
-                <option>French Watches</option>
-              </select>
-            </div>
-            <div class="col-11 col-md-7">
-              <form id="search-form" class="text-center" action="" method="">
-                <input type="text" class="form-control border-0 bg-transparent" placeholder="Search...">
-              </form>
-            </div>
-            <div class="col-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" ><path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
-
-          <ul class="d-flex justify-content-end list-unstyled m-0">
-            <li>
-              <a routerLink="login" class="rounded-circle bg-light p-2 mx-1 text-dark">
-                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
-              </a>
-            </li>
-            <li>
-
-            <li>
-              <a (click)="onLogout()" ><img src="https://img.icons8.com/?size=1x&id=2445&format=png"width="24px" height="24px" style="margin-left: 20px;" class="img-fluid">
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#cart"></use></svg>
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
-                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#search"></use></svg>
-              </a>
-            </li>
-          </ul>
-
-          <div class="cart text-end d-none d-lg-block dropdown">
-            <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-              <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
-              <h5 class="mb-0"><span class="cart-total">{{cartService.items.length}} Product</span></h5>
-            </button>
-          </div>
 
       </div>
     </div>
@@ -87,59 +109,46 @@
         <div class="d-flex  justify-content-center justify-content-sm-between align-items-center">
           <nav class="main-menu d-flex navbar navbar-expand-lg">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
 
               <div class="offcanvas-header justify-content-center">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
 
               <div class="offcanvas-body">
-
                 <select class="filter-categories border-0 mb-0 me-5">
                   <option>Shop by Departments</option>
-                  <option>Groceries</option>
-                  <option>Drinks</option>
-                  <option>Chocolates</option>
+                  <option>Swiss watchs</option>
+                  <option>Japan watchs</option>
+                  <option>German watches</option>
                 </select>
                 <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
                   <li class="nav-item active">
-                    <a href="#women" class="nav-link">Women</a>
+                    <a href="#women" class="nav-link">Products</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a href="#men" class="nav-link">Men</a>
+                    <a href="#men" class="nav-link">About</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#kids" class="nav-link">Kids</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#accessories" class="nav-link">Accessories</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-                    <ul class="dropdown-menu" aria-labelledby="pages">
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#brand" class="nav-link">Brand</a>
+                    <a href="#accessories" class="nav-link">Oders</a>
                   </li>
                   <li class="nav-item">
                   </li>
                   <li class="nav-item">
-                    <a href="#sale" class="nav-link">Sale</a>
+                    <a href="#sale" class="nav-link">Blog</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#blog" class="nav-link"> Contact</a>
                   </li>
                 </ul>
-
               </div>
-
             </div>
-
           </nav>
           <div class="d-none d-lg-block">
             <a href="#" class="nav-link btn-coupon-code">
@@ -155,13 +164,45 @@
 
 <br>
 <br>
-   <!-- <div class="row product-details" *ngIf="productData">
-    <div class="col-sm-6">
-    <img  class="product-img" src="{{productData.image_url}}" alt="" width="600px">
-    </div>
-    <div class="col-sm-6">
-        <div class="details">
-            <h1>{{productData.name}}</h1>
+
+<div class="container">
+  <section class="best-selling">
+    <div class="containers" *ngIf="productData">
+      <div class="best-selling-container">
+        <div class="sale-price">
+          <strong>14%</strong>
+        </div>
+        <div class="selling-col-1">
+          <div class="selling-left">
+            <ul>
+              <li>
+                <span class="count-date">{{days}}</span>
+                <span class="count-day">Day</span>
+              </li>
+              <li>
+                <span class="count-date">{{hours}}</span>
+                <span class="count-day">Hour</span>
+              </li>
+              <li>
+                <span class="count-date">{{mins}}</span>
+                <span class="count-day">Minute</span>
+              </li>
+              <li>
+                <span class="count-date">{{secs}}</span>
+                <span class="count-day">Second</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="selling-col-2">
+          <div class="selling-img">
+            <img src="{{productData.image_url}}" alt="Best Selling">
+          </div>
+        </div>
+        <div class="selling-col-3">
+          <div class="selling-heading">
+            <a href="javascript:void(0);">{{productData.name}}</a>
+            <br>
             <a class="col-md-2" href="product-reviews/{{ productData.id }}"><span><svg xmlns="http://www.w3.org/2000/svg"
               width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
               <path
@@ -169,124 +210,66 @@
               <path
                 d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
             </svg></span></a>
-
             <div class="average-rating">
+              <a>
+                <span *ngFor="let star of convertToStars(calculateAverageRating())">
+                  <span class="{{ star.class }}" [style.color]="star.color"></span>
+                </span>
+              </a>
 
-                <a [innerHTML]="convertToStars(calculateAverageRating())" >  </a>
-
-              <span class="rating">{{ calculateAverageRating().toFixed(1) }}</span>
+              <span>{{ calculateAverageRating().toFixed(1) }}</span>
 
             </div>
-            <h3>Price : {{productData.price | currency:'USD'}}</h3>
-           <span [style.backgroundColor]="productData.color" class="product-color"></span>
-            <h6>Category : {{productData.category_id}}</h6>
-<<<<<<< HEAD
-           
-            <h6>material : {{productData.material}}</h6>
-=======
-            <h6>Material : {{productData.material}}</h6>
->>>>>>> a2ea51380976d421008f9395d259ea8733023a82
-            <h6>Description : {{productData.description}}</h6>
-            <a href="#" (click)="addToCart(productData)" class="btn btn-primary" style="background-color: #007bff;">Add to cart</a>
+          </div>
+          <p><strong>Category :</strong> {{productData.category_id}}</p>
+          <p><strong>Material :</strong> {{productData.material}}</p>
+          <p><strong>Description:</strong> {{productData.description}}</p>
+          <div [style.backgroundColor]="productData.color" class="product-color"></div>
+          <h3>
+            <span class="selling-amount"> {{productData.price}} $</span>
+          </h3>
+          <div class="selling-button" (click)="addToCart(productData)">
+
             <div class="quantity-group">
-              <button (click)="handleQuantity('min')" >-</button>
+              <button (click)="handleQuantity('min')">-</button>
               <input type="text" value="{{quantity}}" />
               <button (click)="handleQuantity('plus')">+</button>
+            </div>
+            <br>
+            <a href="#" (click)="addToCart(productData)" class="cart-btn"><i class="fa fa-shopping-cart"></i>Add to
+              cart.</a>
+
           </div>
         </div>
-    </div>
-<<<<<<< HEAD
-    </div>  -->
- <div class="container">
-=======
-    </div>
- <!-- <div class="container">
->>>>>>> a2ea51380976d421008f9395d259ea8733023a82
-    <section class="best-selling">
-      <div class="containers" *ngIf="productData">
-        <div class="best-selling-container">
-          <div class="sale-price">
-             <strong>14%</strong>
-          </div>
-          <div class="selling-col-1">
-            <div class="selling-left">
-              <ul>
-                <li>
-                  <span class="count-date">{{days}}</span>
-                  <span class="count-day">Ngày</span>
-                </li>
-                <li>
-                  <span class="count-date">{{hours}}</span>
-                  <span class="count-day">Giờ</span>
-                </li>
-                <li>
-                  <span class="count-date">{{mins}}</span>
-                  <span class="count-day">Phút</span>
-                </li>
-                <li>
-                  <span class="count-date">{{secs}}</span>
-                  <span class="count-day">Giây</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="selling-col-2">
-            <div class="selling-img">
-              <img src="{{productData.image_url}}" alt="Best Selling">
-            </div>
-          </div>
-          <div class="selling-col-3">
-            <div class="selling-heading">
-              <a href="javascript:void(0);">{{productData.name}}</a>
-              <h6>material : {{productData.material}}</h6>
-              <h6>Category : {{productData.category_id}}</h6>
-              <div class="selling-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-            </div>
-            <p>description : {{productData.description}}</p>
-            <p>material: {{productData.material}}</p>
-            <div>color :<h3 [style.backgroundColor]="productData.color" class="product-color"></h3></div>
-            <h3>
-              <span class="selling-amount">Giá: ${{productData.price}}</span>
-            </h3>
-              <a href=""(click)="addToCart(productData)"  class="cart-btn"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-              <button type="button" class="main-button">
-                <a href="javascript:void(0);"><i class="fa fa-heart"></i></a>
-                <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
-              </button>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-     
-    
-    </section>
-    </div>
-    
-=======
       </div>
-
-    </section>
-    </div> -->
-
-<br>
->>>>>>> a2ea51380976d421008f9395d259ea8733023a82
-<br>
-    <h2  style="margin-left: 100px;">Product Reviews</h2>
-<<<<<<< HEAD
-=======
-
->>>>>>> a2ea51380976d421008f9395d259ea8733023a82
-     <div *ngFor="let review of reviews" style="margin-left: 120px;">
-      <img src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" width="30px" style="margin-right: 20px;" alt="">
-      <a [innerHTML]="convertToStars(review.rating)" >  </a>
-      <p style="font-size: 12px;">{{ review.created_at }}</p>
-      <p class="comment" style="margin-left: 20px;"> {{ review.comment }}</p>
-      <br>
     </div>
 
+  </section>
+</div>
+
+
+<br>
+<br>
+<br>
+<h2 style="margin-left: 100px;">Product Reviews</h2>
+
+<div *ngFor="let review of reviews" style="margin-left: 120px;">
+
+  <p style="font-style: italic;font-size: 14px;margin-bottom: 0rem;"><img
+      src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" width="30px" style="margin-right: 20px;"
+      alt="">{{review.full_name}}</p>
+
+
+
+  <a style="font-size: 14px;margin-left: 50px;">
+    <span *ngFor="let star of convertToStars(review.rating)">
+      <span class="{{ star.class }}" [style.color]="star.color"></span>
+    </span>
+  </a>
+
+
+  <p style="font-size: 11px;margin-left: 50px;">{{ review.created_at }}</p>
+  <p class="comment" style="margin-left: 50px; font-size: 16px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"> {{ review.comment }}</p>
+
+  <br>
+</div>

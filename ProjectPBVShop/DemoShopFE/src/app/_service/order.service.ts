@@ -20,10 +20,11 @@ export class OrderService {
     return this.http.get('http://localhost:4000/order',httpOptions);
   }
 
-  createOrder(order: Order):Observable<any>{
-    return this.http.post('http://localhost:4000/order',order,httpOptions);
+  createOrder(orderData: any):Observable<any>{
+    return this.http.post('http://localhost:4000/order',orderData,httpOptions);
   }
-  
+
+
 
 
 
