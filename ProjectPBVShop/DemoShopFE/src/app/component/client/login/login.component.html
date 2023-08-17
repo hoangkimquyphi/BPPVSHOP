@@ -1,20 +1,43 @@
-<br>
-<br>
-<br>
-<form (ngSubmit)="onSubmit()">
+<div style="background-color: #cecece;">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" [(ngModel)]="username"><br>
+  <div class="container">
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" [(ngModel)]="password"><br>
-  <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
-  <button type="submit">Submit</button>
-<br>
-    <h5>Want to Create Account ? <a routerLink="/register" >Click Here</a></h5>
-</form>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
 
+    <div class="login-form">
+      <h2>log in</h2>
+      <br>
+      <div class="form-group">
+        <label for="username">User name: </label>
+        <input type="text" id="username" name="username" required [(ngModel)]="username" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" required [(ngModel)]="password" class="form-control">
+      </div>
+      <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+      <br>
 
-
-
-
+      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">log in</button>
+      <br>
+      <h6>You are not have account ? <a routerLink="/register">Click here </a> to register</h6>
+    </div>
+  </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </div>

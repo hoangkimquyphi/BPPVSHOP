@@ -40,7 +40,7 @@
   border: 1px solid rgb(162, 160, 160);
   border-radius: 5px;
   background-color: #fff;
-  color: #fff;
+  color: black;
 }
 
 .form-group div {
@@ -58,7 +58,13 @@
 }
 
 .btn-primary:hover {
-  background-color: #0062cc;
+  background-color: #080bca;
+}
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .alert-danger {

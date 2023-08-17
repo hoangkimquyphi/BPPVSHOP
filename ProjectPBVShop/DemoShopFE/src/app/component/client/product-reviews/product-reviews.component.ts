@@ -78,7 +78,7 @@ export class ProductReviewsComponent  implements OnInit {
           );
         },
         (error: any) => {
-          // console.error('Failed to save product review:', error);
+          console.error('Failed to save product review:', error);
         }
       );
     } else {

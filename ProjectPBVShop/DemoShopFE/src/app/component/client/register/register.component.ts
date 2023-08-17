@@ -28,7 +28,7 @@ export class RegisterComponent {
   passwordError: string = '';
   passwordConfirmationError: string = '';
 
-  
+
 
   constructor(private userService: AuthServiceService,private router:Router) {}
   onSubmit() {

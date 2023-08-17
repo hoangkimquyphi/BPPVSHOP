@@ -54,7 +54,7 @@ import { CardPageComponent } from './component/client/card-page/card-page.compon
     EditCategoryComponent,
     TrendyproductComponent,
     CardPageComponent,
-   
+
 
 
   ],
