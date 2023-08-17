@@ -10,6 +10,7 @@ import { Category } from 'src/app/class/category';
 import { Review } from 'src/app/class/IReview';
 import { User } from 'src/app/class/user';
 
+
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
