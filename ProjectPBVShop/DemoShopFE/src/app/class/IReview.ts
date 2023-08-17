@@ -10,4 +10,5 @@ export interface Review {
   product_id: number;
   created_at: Date;
   updated_at: Date;
+  full_name: string;
 }
