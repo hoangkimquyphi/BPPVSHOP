@@ -35,7 +35,7 @@ export class RegisterComponent {
 
     this.userService.register(this.username, this.email, this.full_name, this.phone,this.address,this.gender,this.birthday, this.password,this.password_confirmation).subscribe(
       (response) => {
-
+        alert('register susseces');
         this.router.navigate(['/login'])
 
       },

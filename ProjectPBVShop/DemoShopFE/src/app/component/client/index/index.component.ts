@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/_service/auth.service.service';
 import { CartService } from 'src/app/_service/cart.service';
 import { CategoryService } from 'src/app/_service/category.service';
 import { ProductService } from 'src/app/_service/product.service';
+import { Product } from 'src/app/class/product';
 
 @Component({
   selector: 'app-index',
@@ -18,7 +19,7 @@ export class IndexComponent implements OnInit {
  AuthServiceService: any;
  loader: Boolean=true;
 
-  constructor(private productService: ProductService,public cartService:CartService,private categoryService: CategoryService,private authService:AuthServiceService,private router: Router){}
+  constructor(private productService: ProductService,public cartService:CartService,private categoryService: CategoryService,private authService:AuthServiceService,private router: Router, private route:ActivatedRoute){}
 
   ngOnInit(): void {
     this.getListProduct();
@@ -74,5 +75,10 @@ export class IndexComponent implements OnInit {
   p: number = 1;
   items: any[] = Array.from({length: 100}).map((_, i) => `Item ${i + 1}`);
 
-
+  // getProducts() {
+  //   const id_category = this.route.snapshot.params['id']
+  //   this.productService.getProducts(id_category).subscribe((data: Product[]) => {
+  //     this.products = data;
+  //   });
+  // }
 }

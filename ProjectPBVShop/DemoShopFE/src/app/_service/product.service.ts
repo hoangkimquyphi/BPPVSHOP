@@ -31,7 +31,7 @@ export class ProductService {
   getProduct(id: string) {
     return this.http.get<Product>(`http://localhost:4000/api/products/${id}`);
   }
-  
+
 
   getProductById(id: number): Observable<Product> {
     return this.http.get<Product>('http://localhost:4000/api/products' + id, httpOptions);
@@ -72,4 +72,9 @@ export class ProductService {
   }
 
 
+  getAll():Observable<Product[]>{
+    const apiUrl =`http://localhost:4000/api/products/`
+    return this.http.get<Product[]>(apiUrl).pipe(
+    )
+}
 }

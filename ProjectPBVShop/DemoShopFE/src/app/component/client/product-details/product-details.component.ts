@@ -20,9 +20,9 @@ export class ProductDetailsComponent  implements OnInit {
   reviews:  Review[] = [];
   users: User[] = [];
   productData: undefined | Product;
-
   productMessage: undefined | string;
   quantity:number=1;
+
 
 
   // reviewList: IReview | any;

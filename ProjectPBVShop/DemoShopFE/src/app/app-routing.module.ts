@@ -18,6 +18,7 @@ import { AddCategoryComponent } from './component/admin/add-category/add-categor
 import { EditCategoryComponent } from './component/admin/edit-category/edit-category.component';
 import { CardPageComponent } from './component/client/card-page/card-page.component';
 import { ProductReviewsComponent } from './component/client/product-reviews/product-reviews.component';
+import { ListProductComponent } from './list-product/list-product.component';
 
 
 const routes: Routes = [
@@ -36,8 +37,8 @@ const routes: Routes = [
   {path:'editcategory/:id',component:EditCategoryComponent},
   {path:'card-page',component:CardPageComponent},
   {path:'admin',component: DashboardComponent},
-  {path:'product-reviews/:id',component: ProductReviewsComponent,
-
+  {path:'product-reviews/:id',component: ProductReviewsComponent},
+  {path:'list-product',component: ListProductComponent,
     children: [
       {path:'',component:CategoryComponent},
       {path:'product',component:ProductComponent},
